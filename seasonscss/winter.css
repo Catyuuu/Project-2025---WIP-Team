@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.container {
+  margin-top: 10%;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.hidden {
+  display: none;
+}
+.season-btn {
+  padding: 20px 40px;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  transition: background 0.3s;
+}
+
+.spring { background: #77dd77; }
+.summer { background: #fdfd96; color: #000; }
+.autumn { background: #ffb347; }
+.winter { background: #aec6cf; }
+
+.season-btn:hover {
+  opacity: 0.8;
+}
