@@ -1,65 +1,40 @@
-html {
-    background-color:aquamarine;
-}
-h1 {
-    margin: 4 4;
-    padding: 5px;
-    color: #0b0235;
-    text-shadow: 3px 3px 1px black;
-    font-family: "Roboto", sans-serif;
-    font-size: 60px;
-    text-align: center;
-}
 body {
-  margin: 0 auto;
-  padding: auto auto auto auto;
-}
-h2 {
-    font-family: "Roboto", sans-serif;
-    color: black;
-    font-size: 30px;
-    text-align: center;
-}
-h3 {
-    font-family: "Roboto", sans-serif;
-    color: purple;
-    font-size: 30px;
-    text-align: left;
-    font-style: normal;
-    font-weight: bold;
-}
-li {
-  color: goldenrod;
-  font-style: oblique;
-  padding: 5px;
-  border-radius: 3px;
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-  border: 1px solid black;
-}
-img {
-  display: block;
-  margin: 0 auto;
-  max-width:100%;
-  border-radius: 8px;
-  border-style: ridge;
-  box-shadow: 0cqmax blueviolet;
-}
-label {
-    font: 
-    1rem "Fira Sans",
-    sans-serif;
-}
-input {
-    margin: 0.4rem
-}
-audio {
-    box-sizing: border-box;
-    align-content: center;
-}
-footer {
-text-align: right;
-font-size: 16px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  text-align: center;
 }
 
+.container {
+  margin-top: 10%;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.season-btn {
+  padding: 20px 40px;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  transition: background 0.3s;
+}
+
+.spring { background: #77dd77; }
+.summer { background: #fdfd96; color: #000; }
+.autumn { background: #ffb347; }
+.winter { background: #aec6cf; }
+
+.season-btn:hover {
+  opacity: 0.8;
+}
