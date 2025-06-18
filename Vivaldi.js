@@ -7,47 +7,56 @@ function loadSeason(season) {
   };
 
   const descriptions = {
-    spring: "Enjoy the cheerful sounds of Spring.",
-    summer: "Feel the heat with Vivaldi's Summer.",
-    autumn: "Experience the fall with Autumn's tune.",
-    winter: "Chill out to Vivaldi's Winter."
+    spring: "Enjoy the music of blooming Spring.",
+    summer: "Relax with the heat of Summer.",
+    autumn: "Feel the change in Vivaldi's Autumn.",
+    winter: "Chill with the crisp sounds of Winter."
   };
 
-  // Update content
+  const audioFiles = {
+    spring: "sounds/4seasons/1. Spring 1(allegro).mp3",
+    summer: "sounds/4seasons/2. Summer 1 (presto).mp3",
+    autumn: "sounds/4seasons/3. Autumn 1 (allegro).mp3",
+    winter: "sounds/4seasons/4. Winter 1 (allegro non molto).mp3"
+  };
+
+  // Update title and description
   document.getElementById('main-title').textContent = titles[season];
   document.getElementById('season-description').textContent = descriptions[season];
 
-  // Set audio source
-  const audioSrc = `audio/${season}.mp3`;
-  document.getElementById('audio-source').src = audioSrc;
+  // Update audio
+  const audioSource = document.getElementById('audio-source');
   const audioPlayer = document.getElementById('audio-player');
+  audioSource.src = audioFiles[season];
   audioPlayer.load();
   audioPlayer.play();
 
-  // Show season content and hide buttons
+  // Show season content
   document.getElementById('season-buttons').classList.add('hidden');
   document.getElementById('season-content').classList.remove('hidden');
 
-  // Optional: change background color
+  // Change background color (optional)
   document.body.style.backgroundColor = {
     spring: "#e0ffe0",
-    summer: "#fffacd",
+    summer: "#fff7b2",
     autumn: "#ffe4b5",
     winter: "#e0f7fa"
   }[season];
 }
 
 function goBack() {
+  // Stop and reset audio
+  const audioPlayer = document.getElementById('audio-player');
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+
   // Reset title
   document.getElementById('main-title').textContent = "Choose a Season";
-  
-  // Pause music
-  document.getElementById('audio-player').pause();
-  
-  // Hide season content and show buttons
+
+  // Toggle visibility
   document.getElementById('season-content').classList.add('hidden');
   document.getElementById('season-buttons').classList.remove('hidden');
-  
-  // Reset background
+
+  // Reset background color
   document.body.style.backgroundColor = "#f0f0f0";
 }

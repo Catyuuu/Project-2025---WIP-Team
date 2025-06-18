@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vivaldi Seasons</title>
+  <link rel="stylesheet" href="Vivaldi.css" /> <!-- LINK TO CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1 id="main-title">Choose a Season</h1>
+    <div class="buttons" id="season-buttons">
+      <button onclick="loadSeason('spring')" class="season-btn spring">Spring</button>
+      <button onclick="loadSeason('summer')" class="season-btn summer">Summer</button>
+      <button onclick="loadSeason('autumn')" class="season-btn autumn">Autumn</button>
+      <button onclick="loadSeason('winter')" class="season-btn winter">Winter</button>
+    </div>
+
+    <div id="season-content" class="hidden">
+      <p id="season-description"></p>
+      <audio id="audio-player" autoplay loop>
+        <source id="audio-source" src="" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <br><br>
+      <button onclick="goBack()" class="season-btn">Back to Menu</button>
+    </div>
+  </div>
+
+  <script src="Vivaldi.js"></script> <!-- LINK TO JS -->
+</body>
+</html>
