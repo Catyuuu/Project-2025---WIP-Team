@@ -3,7 +3,10 @@ body {
   font-family: Arial, sans-serif;
   background: #f0f0f0;
   text-align: center;
+  background-image: url("autumn.jpeg");
+  background-color: #cccccc;
 }
+
 
 .container {
   margin-top: 10%;
